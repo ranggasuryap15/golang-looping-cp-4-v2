@@ -18,6 +18,8 @@ func EmailInfo(email string) string {
 
 	if len(emailInfo) > 2 {
 		tld = strings.Join(emailInfo[1:], ".")
+	} else {
+		tld = emailInfo[1]
 	}
 	hasil := fmt.Sprintf("Domain: %s dan TLD: %s", domain, tld)
 	return hasil
